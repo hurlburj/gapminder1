@@ -1,18 +1,10 @@
 library("tidyverse")
-library("dplyr")
 
-gapminder <- read_csv("data/gapminder.csv")
-
-<<<<<<< HEAD
-testline
-test2
-=======
->>>>>>> parent of e6b3c27... fifth committ
-##Calculate average life expectancy by continent
+ gapminder <- read_csv("data/gapminder.csv")
 
  life_exp_continent <- gapminder %>%
   group_by(continent) %>%
-  summarise(
+  summarize(
     mean_life_exp = mean(lifeExp)
   )
 
@@ -26,4 +18,12 @@ test2
      mean_gdp = mean(gdpPercap)
    )
  
+ pop_size_china <- gapminder %>%
+   filter(country == "China") %>%
+   select(year, pop)
+ 
+ max_pop_size_2007 <- gapminder %>%
+   filter(year == 2007) %>%
+   group_by(country) %>%
+   summarize(max_pop = max(pop))
  
