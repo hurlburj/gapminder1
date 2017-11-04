@@ -4,7 +4,7 @@ library("dplyr")
 gapminder <- read_csv("data/gapminder.csv")
 
 testline
-
+test2
 ##Calculate average life expectancy by continent
 
  life_exp_continent <- gapminder %>%
