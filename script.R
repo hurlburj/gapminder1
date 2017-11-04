@@ -3,8 +3,11 @@ library("dplyr")
 
 gapminder <- read_csv("data/gapminder.csv")
 
+<<<<<<< HEAD
 testline
 test2
+=======
+>>>>>>> parent of e6b3c27... fifth committ
 ##Calculate average life expectancy by continent
 
  life_exp_continent <- gapminder %>%
